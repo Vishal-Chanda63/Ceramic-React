@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Whychoose from "./components/Whychoose";
 import Works from "./components/Works";
+import Gettouch from "./components/Gettouch";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       </div>
       <Whychoose />
       <Works />
-      {/* <Footer /> */}
+      <Gettouch />
     </>
   );
 }

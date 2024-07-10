@@ -406,6 +406,36 @@ h2 {
 }
 
 
+/* ============== GET IN TOUCH WITH US ============= */
+.intersted_box {
+  background-image: url("./assets/png/getintouchbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  height: 447px;
+}
+
+.get_in_touch {
+  max-width: 620px !important;
+}
+
+.mx_316 {
+  max-width: 316px;
+}
+
+.get_in_touch_btn {
+  background-color: var(--white-color);
+  color: var(--red-color);
+  border: 1px solid var(--white-color);
+}
+
+.get_in_touch_btn:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+
 
 
 @media(min-width:1400px) {
@@ -449,6 +479,10 @@ h2 {
   .works_img {
     width: 469px;
     height: 500px;
+  }
+
+  .intersted_box {
+    height: 379px;
   }
 }
 
