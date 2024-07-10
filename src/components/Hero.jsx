@@ -8,9 +8,9 @@ import awardLogo from "../assets/svg/award_logo.svg";
 const Hero = () => {
   return (
     <>
-      <section className="hero_bg d-flex align-items-center">
+      <section className="mt-5 pt-0 pt-lg-4">
         <div className="container">
-          <div className="row">
+          <div className="row mt-0 mt-sm-2">
             {/* <div class="content">
               <h1>Bubble hover effect</h1>
               <div class="button_container">
@@ -49,7 +49,7 @@ const Hero = () => {
                   Transform Your Space with Precision and Quality:{" "}
                   <span className="d-inline d-lg-block ">Get a Free Quote Today!</span>
                 </h1>
-                <p className="white my-3 pt-1 pb-3 font_md line_28 hero_para">
+                <p className="white my-3 pt-1 pb-0 pb-sm-3 font_md line_28 hero_para">
                   Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.
                   Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
                   nyheter eurosamma sol: teroktig,
@@ -58,7 +58,7 @@ const Hero = () => {
                   Get A Quote
                 </button>
 
-                <div class="mt-5 pt-0 pt-sm-3 d-flex flex-column flex-md-row">
+                <div class="mt-4 mt-sm-5 pt-0 pt-sm-3 d-flex flex-column flex-md-row">
                   <div class="d-inline d-md-flex  mb-4">
                     <div class="google_review_box cursur d-inline-block me-sm-4 mb-4 mb-sm-0 review_padding_right">
                       <div class="d-flex align-items-center">

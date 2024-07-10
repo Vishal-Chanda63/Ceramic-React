@@ -257,6 +257,24 @@ h2 {
 
 
 
+
+
+
+/* ======================= NAVBAR CSS ============================== */
+.navbar_btn_quote {
+  padding: 13px 20.235px;
+}
+
+.navbar_btn_quote:hover svg path {
+  fill: var(--red-color);
+
+}
+
+.navbar_btn_quote:hover {
+  border: 1px solid var(--red-color);
+}
+
+
 /* ======================= HERO SECTION ============================== */
 
 .hero_bg {
@@ -290,122 +308,51 @@ h2 {
 }
 
 
+/* ============== WHY CHOOSE US ============= */
 
-/* ======================= BUTTON HOVER CSS ============================== */
-
-body {
-  font-family: 'Inconsolata', sans-serif;
-  background: #2a364f;
+.why_choose_section {
+  background-color: var(--background-light);
 }
 
-h1 {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+.star_box {
+  width: 62px;
+  height: 62px;
+  background-color: var(--pink);
+  border-radius: 10px;
 }
 
-.credit {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-
-}
-
-.content {
-  padding-top: 45px;
-  padding-bottom: 20px;
-}
-
-.button_container {
-  width: 176px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding-top: 40px;
-}
-
-.button_su {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-
-.su_button_circle {
-  background-color: red;
-  border-radius: 1000px;
-  position: absolute;
+.red_box {
+  width: 300px;
+  height: 396px;
+  background-color: var(--red-color);
+  border-radius: 24px;
   left: 0;
-  top: 0;
-  width: 0px;
-  height: 0px;
-  margin-left: 0px;
-  margin-top: 0px;
-  pointer-events: none;
-  /*animation-timing-function: ease-in-out; */
+  bottom: 0;
+  z-index: 1;
 }
 
-.button_su_inner {
-  display: inline-block;
-  background: #F8B627;
-  color: #F4F4F4;
-  font-size: 16px;
-  font-weight: normal;
-  width: 132px;
-  text-align: center;
-  border-radius: 3px;
-  transition: 400ms;
-  text-decoration: none;
-  padding: 22px;
-  z-index: 100000;
+.img_box {
+  z-index: 2;
 }
 
-.button_text_container {
-  position: relative;
-  z-index: 10000;
+.why_choose_para {
+  max-width: 590px;
 }
 
-.explode-circle {
-  animation: explode 0.5s forwards;
-
+.choose_img {
+  width: 469px;
+  height: 523px;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
-.desplode-circle {
-  animation: desplode 0.5s forwards;
+.choose_para {
+  max-width: 370px;
 }
 
-@keyframes explode {
-  0% {
-    width: 0px;
-    height: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    background-color: rgba(42, 53, 80, 0.2);
-  }
-
-  100% {
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
-  }
-}
-
-@keyframes desplode {
-  0% {
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
-  }
-
-  100% {
-    width: 0px;
-    height: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    background-color: rgba(129, 80, 108, 0.6);
-  }
+.chose_quote_btn:hover {
+  border: 1px solid var(--red-color);
+  background-color: transparent;
 }
 
 
@@ -418,9 +365,27 @@ h1 {
   }
 }
 
+@media(max-width:1199.98px) {
+  .choose_img {
+    width: 376px;
+    height: 500px;
+  }
+}
+
+@media(min-width:992px) {
+  .main_red_box {
+    height: 603px;
+  }
+}
+
 @media(max-width:991.98px) {
   .hero_text {
     max-width: 550px;
+  }
+
+  .choose_img {
+    width: 469px;
+    height: 500px;
   }
 }
 
@@ -435,5 +400,15 @@ h1 {
 
   .common_btn {
     padding: 13px 23.2px;
+  }
+
+  .nav-quantum {
+    height: 70px;
+  }
+
+  .choose_img {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
   }
 }
