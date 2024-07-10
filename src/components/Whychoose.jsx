@@ -16,7 +16,9 @@ const Whychoose = () => {
             data-aos-delay="400"
             data-aos-duration="1000"
           >
-            <h2 class="font_xxg fw_600 mb-0 text-capitalize">Why Choose us?</h2>
+            <h2 class="font_xxg fw_600 mb-0 text-capitalize black">
+              Why Choose us?
+            </h2>
             <p class="font_md my-1 my-sm-3 pt-1 pb-3 black line_height_paragraph why_choose_para">
               Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.
               Pregigt primasofi dede facebooka: förutom tivaligt.{" "}
