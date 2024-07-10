@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+body {
+  font-family: "Plus Jakarta Sans",
+    sans-serif !important;
+
+}
+
+p,
+h1,
+h2 {
+  margin-bottom: 0 !important;
+}
+
+.manrope_font {
+  font-family: "Manrope",
+    sans-serif !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* ==============ROOT VARIABLES============= */
+:root {
+  /* FONT SIZES */
+  --font-xsm: 12px;
+  --font-sm: 14px;
+  --font-m: 16px;
+  --font-md: 18px;
+  --font-lg: 20px;
+  --font-xl: 24px;
+  --font-xxg: 56px;
+  --font-xxl: 64px;
+
+  /* ROOT-COLORS  */
+  --white-color: #fff;
+  --black-color: #000;
+  --red-color: #ff0000;
+  --dark-black: #141414;
+  --dark-black-second: #010101;
+  --border-light: #e0e0e0;
+  --pink: #f7d4d4;
+  --background-light: #ffebeb;
+  --light-black: #1b2228;
+  --footer-border: #7f7f7f;
+  --light-pink: #81848a;
+  --grey-color: #d9d9d9;
+  --border-grey: #dcdcdc;
+  --grey: #767676;
+}
+
+/* ================= MEDIA QUERISE FONT ======================= */
+@media (max-width: 1399.98px) {
+  :root {
+    --font-xsm: 12px;
+    --font-sm: 14px;
+    --font-m: 16px;
+    --font-md: 18px;
+    --font-lg: 20px;
+    --font-xl: 24px;
+    --font-xxg: 45px;
+    --font-xxl: 48px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  :root {
+    --font-xsm: 12px;
+    --font-sm: 14px;
+    --font-m: 16px;
+    --font-md: 18px;
+    --font-lg: 20px;
+    --font-xl: 22px;
+    --font-xxg: 40px;
+    --font-xxl: 45px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --font-xsm: 12px;
+    --font-sm: 14px;
+    --font-m: 16px;
+    --font-md: 18px;
+    --font-lg: 20px;
+    --font-xl: 18px;
+    --font-xxg: 32px;
+    --font-xxl: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --font-xsm: 12px;
+    --font-sm: 12px;
+    --font-m: 16px;
+    --font-md: 16px;
+    --font-lg: 18px;
+    --font-xl: 16px;
+    --font-xxg: 34px;
+    --font-xxl: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --font-xsm: 12px;
+    --font-sm: 12px;
+    --font-m: 14px;
+    --font-md: 14px;
+    --font-lg: 16px;
+    --font-xl: 14px;
+    --font-xxg: 30px;
+    --font-xxl: 32px;
+  }
+}
+
+/* ======================= FONT WEIGHT============================== */
+.fw_400 {
+  font-weight: 400 !important;
+}
+
+.fw_600 {
+  font-weight: 600 !important;
+}
+
+.line_height_paragraph {
+  line-height: 28.8px !important;
+}
+
+.line_height_para {
+  line-height: 25.6px !important;
+}
+
+/* ======================= COMMON COLORS============================== */
+.black {
+  color: var(--black-color) !important;
+}
+
+.white {
+  color: var(--white-color) !important;
+}
+
+.red {
+  color: var(--red-color) !important;
+}
+
+.dark_black {
+  color: var(--dark-black) !important;
+}
+
+.dark_black_second {
+  color: var(--dark-black-second) !important;
+}
+
+.border_light {
+  color: var(--border-light) !important;
+}
+
+.pink {
+  color: var(--pink) !important;
+}
+
+.background_light {
+  color: var(--background-light) !important;
+}
+
+.light_black {
+  color: var(--light-black) !important;
+}
+
+.foter_border {
+  color: var(--footer-border) !important;
+}
+
+.light_pink {
+  color: var(--light-pink) !important;
+}
+
+.grey_color {
+  color: var(--grey-color) !important;
+}
+
+.border_grey {
+  color: var(--border-grey) !important;
+}
+
+.grey {
+  color: var(--grey) !important;
+}
+
+
+/* ======================= COMMON CLASSES============================== */
+
+.font_xsm {
+  font-size: var(--font-xsm);
+}
+
+.font_sm {
+  font-size: var(--font-sm);
+}
+
+.font_m {
+  font-size: var(--font-m);
+}
+
+.font_md {
+  font-size: var(--font-md);
+}
+
+.font_lg {
+  font-size: var(--font-lg);
+}
+
+.font_xl {
+  font-size: var(--font-xl);
+}
+
+.font_xxg {
+  font-size: var(--font-xxg);
+}
+
+.font_xxl {
+  font-size: var(--font-xxl);
+}
+
+.cursur {
+  cursor: pointer;
+}
+
+.common_btn {
+  padding: 17px 31.2px;
+  border-radius: 56px;
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border: 1px solid var(--red-color);
+  transition: 0.4s ease-in-out;
+}
+
+.common_btn:hover {
+  color: var(--red-color);
+  background-color: var(--white-color);
+  border: 1px solid var(--white-color);
+}
+
+
+
+
+/* ======================= HERO SECTION ============================== */
+
+.hero_bg {
+  background: url("./assets/webp/hero-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 810px;
+}
+
+
+
+
+
+
+
+
+@media(min-width:1400px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
