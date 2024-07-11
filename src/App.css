@@ -470,6 +470,58 @@ button:focus-visible {
 
 
 
+
+/* ============== FAQ SECTION ============= */
+
+.accordion {
+  width: 912px;
+  margin: auto;
+}
+
+.accordion-item {
+  box-shadow: 0px 2px 44px 3px #5757571A !important;
+  padding: 0px 0px !important;
+  border-radius: 16px !important;
+  border: none !important;
+}
+
+.accordion-button {
+  font-size: var(--font-md) !important;
+  padding: 25.21px 20px !important;
+  border-radius: 16px !important;
+  color: var(--black-color) !important;
+}
+
+.accordion-button:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--black-color) !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.accordion-body {
+  color: var(--black-color) !important;
+  padding: 0px 100px 25.21px 20px !important;
+  font-size: var(--font-md);
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 20px !important;
+  height: 20px !important;
+  margin-left: auto;
+  content: "";
+  background-image: url("./assets/svg/accordion-faq.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 100% !important;
+  transition: transform .2s ease-in-out;
+}
+
+
 /* ============== SERVICES CSS START ============= */
 
 .services_box {

@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Whatwedo from "./components/Whatwedo";
 import Ourblog from "./components/Ourblog";
 import Services from "./components/Services";
+import Faq from "./components/Faq";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Works />
       <Gettouch />
       <Ourblog />
+      <Faq />
       <Services />
       <Footer />
     </>
