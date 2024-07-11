@@ -28,22 +28,22 @@ const Dummy = () => {
     },
     {
       title: " Lorem ipsum dolor sit",
-      Discription: 3,
+      Discription: 4,
       img: LargeFormatTiling,
     },
     {
       title: " Lorem ipsum dolor sit",
-      Discription: 3,
+      Discription: 5,
       img: WallTiling,
     },
     {
       title: " Lorem ipsum dolor sit",
-      Discription: 3,
+      Discription: 6,
       img: ADACompliantShowers,
     },
     {
       title: " Lorem ipsum dolor sit",
-      Discription: 3,
+      Discription: 7,
       img: FireplaceTiling,
     },
   ];
