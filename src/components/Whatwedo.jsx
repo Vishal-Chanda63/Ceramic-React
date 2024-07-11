@@ -65,15 +65,18 @@ const Dummy = () => {
                 >
                   <div className="what_we_do_card p-3 p-sm-4 mb-4">
                     <img className="w-100" src={obj.img} alt="Cards_img" />
-                    <h4 className="mt-4 mb-2 fw_600 black">Tit; {obj.title}</h4>
+                    <h4 className="mt-4 mb-2 fw_600 black font_xl">
+                      {" "}
+                      {obj.title}
+                    </h4>
                     <p className="mt-1 mb-2 mb-sm-3 mb-md-4 black font_m what_we_do_para">
                       Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
                       viliga.
                       {obj.number}
                     </p>
-                    <button className="learn_more_btn red fw_600 ">
+                    <button className="learn_more_btn red fw_600 font_m">
                       Learn more
-                      <span className="ms-3 ">
+                      <span className="ms-1 ms-sm-2 ms-md-3">
                         <img src={ArrowIcon} alt="ArrowIcon" />
                       </span>
                     </button>
