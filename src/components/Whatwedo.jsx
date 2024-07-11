@@ -55,7 +55,7 @@ const Dummy = () => {
             return (
               <>
                 <div
-                  className={`p-3 what_we_do_card col-4
+                  className={`p-3 what_we_do_card col-12 col-sm-4
                 }`}
                 >
                   <img src={obj.img} alt="Cards_img" />
