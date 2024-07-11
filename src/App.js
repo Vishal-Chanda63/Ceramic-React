@@ -6,6 +6,7 @@ import Whychoose from "./components/Whychoose";
 import Works from "./components/Works";
 import Gettouch from "./components/Gettouch";
 import Footer from "./components/Footer";
+import Whatwedo from "./components/Whatwedo";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Hero />
       </div>
+      <Whatwedo />
       <Whychoose />
       <Works />
       <Gettouch />
