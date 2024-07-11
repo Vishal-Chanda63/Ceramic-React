@@ -8,6 +8,7 @@ import Gettouch from "./components/Gettouch";
 import Footer from "./components/Footer";
 import Whatwedo from "./components/Whatwedo";
 import Ourblog from "./components/Ourblog";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Works />
       <Gettouch />
       <Ourblog />
+      <Services />
       <Footer />
     </>
   );
