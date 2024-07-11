@@ -7,6 +7,7 @@ import Works from "./components/Works";
 import Gettouch from "./components/Gettouch";
 import Footer from "./components/Footer";
 import Whatwedo from "./components/Whatwedo";
+import Ourblog from "./components/Ourblog";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Whychoose />
       <Works />
       <Gettouch />
+      <Ourblog />
       <Footer />
     </>
   );

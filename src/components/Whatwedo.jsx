@@ -48,28 +48,36 @@ const Dummy = () => {
     },
   ];
   return (
-    <div className="my-5 py-5">
-      <div className="container my-4 py-3">
-        <div className="mb-4 row">
+    <div id="about" className="my-5 py-0 py-lg-4 py-xl-5">
+      <div className="container mt-4 py-3">
+        <div class="col mt-0 mt-sm-1">
+          <h2 class="font_xxg fw_600 text-center mb-0 black text-capitalize">
+            What we do
+          </h2>
+        </div>
+        <div className="mb-0 mb-md-4 row mt-4 mt-md-5 pt-2">
           {myArr.map((obj, index) => {
             return (
               <>
                 <div
-                  className={`p-3 what_we_do_card col-12 col-sm-4
+                  className={` col-12 col-md-6 col-lg-4
                 }`}
                 >
-                  <img src={obj.img} alt="Cards_img" />
-                  <h4 className="mt-4 mb-2 fw_600 black">Tit; {obj.title}</h4>
-                  <p className="mt-1 mb-4 black font_m">
-                    Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.
-                    {obj.number}
-                  </p>
-                  <button className="learn_more_btn red">
-                    Learn more
-                    <span className="ms-3 ">
-                      <img src={ArrowIcon} alt="ArrowIcon" />
-                    </span>
-                  </button>
+                  <div className="what_we_do_card p-3 p-sm-4 mb-4">
+                    <img className="w-100" src={obj.img} alt="Cards_img" />
+                    <h4 className="mt-4 mb-2 fw_600 black">Tit; {obj.title}</h4>
+                    <p className="mt-1 mb-2 mb-sm-3 mb-md-4 black font_m what_we_do_para">
+                      Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
+                      viliga.
+                      {obj.number}
+                    </p>
+                    <button className="learn_more_btn red fw_600 ">
+                      Learn more
+                      <span className="ms-3 ">
+                        <img src={ArrowIcon} alt="ArrowIcon" />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </>
             );

@@ -93,7 +93,7 @@ h4 {
     --font-md: 18px;
     --font-lg: 20px;
     --font-xl: 18px;
-    --font-xxg: 32px;
+    --font-xxg: 36px;
     --font-xxl: 40px;
   }
 }
@@ -256,10 +256,9 @@ h4 {
   border: 1px solid var(--white-color);
 }
 
-
-
-
-
+button:focus-visible {
+  outline: none !important;
+}
 
 
 /* ======================= NAVBAR CSS ============================== */
@@ -457,6 +456,20 @@ h4 {
   background-color: transparent;
 }
 
+.what_we_do_para {
+  max-width: 314px;
+}
+
+.learn_more_btn img {
+  transition: 0.3s ease-in-out;
+}
+
+.learn_more_btn:hover img {
+  margin-left: 10px;
+}
+
+
+
 
 
 
@@ -509,6 +522,15 @@ h4 {
   }
 }
 
+
+@media (max-width:767.98px) {
+  .what_we_do_card {
+    width: 364px;
+    margin: auto;
+  }
+}
+
+
 @media(max-width:575.98px) {
   .review_padding_right {
     margin-right: 5px !important;
@@ -543,4 +565,13 @@ h4 {
     border-radius: 12px;
   }
 
+
+
+}
+
+
+@media(max-width:420px) {
+  .what_we_do_card {
+    width: 100%;
+  }
 }
