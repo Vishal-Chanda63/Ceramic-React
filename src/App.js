@@ -23,7 +23,7 @@ function App() {
       <Gettouch />
       <Ourblog />
       <Services />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
