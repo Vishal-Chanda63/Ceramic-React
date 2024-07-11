@@ -38,7 +38,7 @@ const Ourblog = () => {
             </p>
           </div>
 
-          <div className="row mb-0 mb-md-4 mt-4 mt-md-5 pt-2">
+          <div className="row mt-4 mt-md-5 pt-2">
             {myArr.map((obj, index) => {
               return (
                 <>

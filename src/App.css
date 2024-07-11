@@ -618,6 +618,14 @@ button:focus-visible {
     width: 364px;
     margin: auto;
   }
+
+  .services_box {
+    border-radius: 12px;
+  }
+
+  .services_box img {
+    width: 40px;
+  }
 }
 
 
@@ -654,14 +662,19 @@ button:focus-visible {
     height: 350px;
     border-radius: 12px;
   }
-
-
-
 }
 
 
 @media(max-width:420px) {
   .what_we_do_card {
     width: 100%;
+  }
+
+  .services_box {
+    width: 100%;
+  }
+
+  .services_box img {
+    width: 30px;
   }
 }
