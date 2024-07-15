@@ -72,7 +72,7 @@ const Dummy = () => {
                     <p className="mt-1 mb-2 mb-sm-3 mb-md-4 black font_m what_we_do_para">
                       Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
                       viliga.
-                      {obj.number}
+                      {obj.Discription}
                     </p>
                     <button className="learn_more_btn red fw_600 font_m">
                       Learn more

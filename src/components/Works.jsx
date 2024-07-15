@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 import worksImage from "../assets/png/works.png";
 import tickImage from "../assets/svg/tick.svg";
 
 const Works = () => {
+  const [isVisible, setisVisible] = useState(false);
+
+  const myArr = [
+    {
+      img: tickImage,
+      title: "Contact us",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+      img: tickImage,
+      title: "Get a Qoute",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+      img: tickImage,
+      title: "Get your Work Done",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+  ];
+
   return (
     <section id="quote" class="py-4 my-3 px-3">
       <div class="container">
@@ -26,54 +49,25 @@ const Works = () => {
                 Pregigt primasofi dede facebooka: förutom tivaligt.{" "}
               </p>
 
-              <div class="d-flex mb-3 works_box p-3">
-                <div>
-                  <img src={tickImage} alt="tickImage" />
-                </div>
-
-                <div class="ms-1 ms-sm-3 ps-1">
-                  <h4 class="font_lg fw_600 lh-base mb-0 mb-sm-2 pb-1 lh-base">
-                    Contact us
-                  </h4>
-                  <p class="font_m  black line_height_para mb-0">
-                    Lörem ipsum deligen vuprer diar faktigt på dehädiska att
-                    sara. Persion. Repp löng blippbetalning. Megaliga fadat om
-                    än dening
-                  </p>
-                </div>
-              </div>
-              <div class="d-flex mb-3 works_box p-3">
-                <div>
-                  <img src={tickImage} alt="tickImage" />
-                </div>
-
-                <div class="ms-1 ms-sm-3 ps-1">
-                  <h4 class="font_lg fw_600 lh-base mb-0 mb-sm-2 pb-1 lh-base">
-                    Get a Qoute
-                  </h4>
-                  <p class="font_m  black line_height_para mb-0">
-                    Lörem ipsum deligen vuprer diar faktigt på dehädiska att
-                    sara. Persion. Repp löng blippbetalning. Megaliga fadat om
-                    än dening
-                  </p>
-                </div>
-              </div>
-              <div class="d-flex works_box p-3">
-                <div>
-                  <img src={tickImage} alt="tickImage" />
-                </div>
-
-                <div class="ms-1 ms-sm-3 ps-1">
-                  <h4 class="font_lg fw_600 lh-base mb-0 mb-sm-2 pb-1 lh-base">
-                    Get your Work Done
-                  </h4>
-                  <p class="font_m  black line_height_para mb-0">
-                    Lörem ipsum deligen vuprer diar faktigt på dehädiska att
-                    sara. Persion. Repp löng blippbetalning. Megaliga fadat om
-                    än dening
-                  </p>
-                </div>
-              </div>
+              {myArr.map((obj, index) => {
+                return (
+                  <>
+                    <div className="works_box mb-3 p-3 d-flex">
+                      <div>
+                        <img src={obj.img} alt="why choose images" />
+                      </div>
+                      <div class="ms-1 ms-sm-3 ps-1">
+                        <h4 class="font_lg fw_600 lh-base mb-0 mb-sm-2 pb-1 dark_black_second">
+                          {obj.title}
+                        </h4>
+                        <p class="black line_height_para mb-0 font_m choose_para">
+                          {obj.discription}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
 
               <div class="mt-4 pt-1">
                 <button class="common_btn works_quote_btn fw-bold font_md mt-2 text-capitalize">

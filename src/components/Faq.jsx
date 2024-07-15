@@ -20,7 +20,7 @@ const Faq = () => {
           data-aos-duration="1000"
         >
           Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt
-          primasofi dede facebooka: förutom tivaligt.{" "}
+          primasofi dede facebooka: förutom tivaligt.
         </p>
         <div
           class="accordion accordion-flush my-4 my-sm-5"
