@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import footerLogo from "../assets/svg/footer_logo.svg";
 import messageIcon from "../assets/svg/message.svg";
@@ -9,6 +9,26 @@ import twitterIcon from "../assets/svg/twitter.svg";
 import linkedinIcon from "../assets/svg/linkedin.svg";
 
 const Footer = () => {
+  const [isVisible, setisVisible] = useState(false);
+
+  const myArr = [
+    {
+      title: "Links",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+      title: "Legal",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+      title: "Product",
+      discription:
+        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+  ];
+
   return (
     <div class="section pt-4 pt-5 foter_section">
       <div class="container">
@@ -65,89 +85,44 @@ const Footer = () => {
             </div>
           </div>
 
-          <div class="col-4 col-sm-4 col-lg-1 mt-3 mt-md-0 p-0">
-            <div class="footer_links ">
-              <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">Links</p>
-              <ul class="list-unstyled cursur font_m foter_para">
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="./index.html"
-                >
-                  <li>Home</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#about"
-                >
-                  <li class="my-2 py-1">About Us</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#services"
-                >
-                  <li>Services</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#showcase"
-                >
-                  <li class="mt-2 pt-1">Showcase</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="col-4 col-sm-4 col-lg-2 mt-3 mt-md-0 px-0 px-md-4">
-            <div class="legal_parent">
-              <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">Legal</p>
-              <ul class="list-unstyled cursur font_m foter_para">
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="./index.html"
-                >
-                  <li>Terms Of Use</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#about"
-                >
-                  <li class="my-2 py-1">Privacy Policy</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#pricing"
-                >
-                  <li>Cookie Policy</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="col-4 col-sm-4 col-lg-1 mt-3 mt-md-0 p-0">
-            <div class="footer_product ps-4 ps-sm-5 ps-lg-0">
-              <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">
-                Product
-              </p>
-              <ul class="list-unstyled cursur font_m foter_para">
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="./index.html"
-                >
-                  <li>Take Tour</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#about"
-                >
-                  <li class="my-2 py-1">Live Chat</li>
-                </a>
-                <a
-                  class="text-decoration-none light_black footer_link"
-                  href="#pricing"
-                >
-                  <li>Reveiws</li>
-                </a>
-              </ul>
-            </div>
-          </div>
+          {myArr.map((obj, index) => {
+            return (
+              <div class="col-4 col-sm-4 col-lg-1 mt-3 mt-md-0 p-0">
+                <div class="footer_links ">
+                  <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">
+                    {obj.title}
+                  </p>
+                  <ul class="list-unstyled cursur font_m foter_para">
+                    <a
+                      class="text-decoration-none light_black footer_link"
+                      href="./index.html"
+                    >
+                      <li>{}</li>
+                    </a>
+                    <a
+                      class="text-decoration-none light_black footer_link"
+                      href="#about"
+                    >
+                      <li class="my-2 py-1">About Us</li>
+                    </a>
+                    <a
+                      class="text-decoration-none light_black footer_link"
+                      href="#services"
+                    >
+                      <li>Services</li>
+                    </a>
+                    <a
+                      class="text-decoration-none light_black footer_link"
+                      href="#showcase"
+                    >
+                      <li class="mt-2 pt-1">Showcase</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
+
           <div class="col-12 col-lg-4 mt-3 mt-md-0 px-0 d-flex justify-content-sm-start justify-content-lg-end">
             <div class="foter_newslater">
               <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">

@@ -10,6 +10,8 @@ import Whatwedo from "./components/Whatwedo";
 import Ourblog from "./components/Ourblog";
 import Services from "./components/Services";
 import Faq from "./components/Faq";
+import Customers from "./components/Customers";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       </div>
       <Whatwedo />
       <Whychoose />
+      <Customers />
       <Works />
       <Gettouch />
       <Ourblog />
