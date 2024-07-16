@@ -27,6 +27,9 @@ h4 {
   box-sizing: border-box;
 }
 
+.cpmmon_transition {
+  transition: 0.4s ease-in-out;
+}
 
 
 /* ==============ROOT VARIABLES============= */
@@ -261,6 +264,18 @@ button:focus-visible {
 }
 
 
+/* ======================= BUTTON HOVER CSS ============================== */
+.button_su_inner {
+  padding: 18px 28px;
+  background-color: var(--red-color) !important;
+  border-radius: 56px;
+  width: 173px;
+}
+
+.su_button_circle {
+  background-color: #7f962d5b !important;
+}
+
 /* ======================= NAVBAR CSS ============================== */
 .navbar_btn_quote {
   padding: 13px 20.235px;
@@ -357,7 +372,6 @@ button:focus-visible {
 }
 
 
-
 /* ============== HOW IT WORKS ============= */
 .red_box_second {
   width: 300px;
@@ -447,9 +461,19 @@ button:focus-visible {
   height: 100% !important;
   box-shadow: 0px 2px 44px 3px #5757571A;
   border-radius: 24px;
+  max-width: 364px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid var(--white-color);
 }
 
+.slider_box:hover {
+  border: 1px solid var(--red-color);
+}
 
+.star_img {
+  width: 24px;
+  height: 24px;
+}
 
 
 /* ============== WHAT WE DO CSS ============= */
@@ -481,9 +505,6 @@ button:focus-visible {
 .learn_more_btn:hover img {
   margin-left: 10px;
 }
-
-
-
 
 /* ============== FAQ SECTION ============= */
 
@@ -558,9 +579,7 @@ button:focus-visible {
 }
 
 
-
 /* ============== FOOTER CSS ============= */
-
 .hover_icon img {
   transition: 0.3s ease-in-out;
   width: 32px;
@@ -576,11 +595,11 @@ button:focus-visible {
   height: 86px;
 }
 
-.footer_link {
-  transition: 0.3s ease-in-out;
+.footer_link li {
+  transition: 0.3s ease-in-out !important;
 }
 
-.footer_link:hover {
+.footer_link li:hover {
   color: var(--red-color) !important;
 }
 
@@ -602,6 +621,11 @@ button:focus-visible {
 
 .subscribe_btn {
   padding: 14.87px 39.72px !important;
+}
+
+.subscribe_btn:hover {
+  border: 1px solid var(--red-color);
+  background-color: transparent;
 }
 
 
@@ -626,6 +650,70 @@ button:focus-visible {
   width: 140px;
 }
 
+
+#myBtn {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 99;
+  cursor: pointer;
+  font-size: var(--font_lg);
+  color: var(--white_color);
+  height: 60px;
+  width: 60px;
+  border-radius: 50% !important;
+  border: 1px solid var(--white-color);
+  background: var(--red-color);
+  transition: all 0.3s ease-in-out;
+}
+
+#myBtn:hover {
+  box-shadow: 2px -1.0123px 22.79012px var(--red-color);
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
 
 
 
@@ -678,10 +766,9 @@ button:focus-visible {
   }
 
   .accordion {
-    width: 100%;
+    width: 85%;
   }
 }
-
 
 @media (max-width:767.98px) {
   .what_we_do_card {
@@ -697,7 +784,6 @@ button:focus-visible {
     width: 40px;
   }
 }
-
 
 @media(max-width:575.98px) {
   .review_padding_right {
@@ -736,8 +822,32 @@ button:focus-visible {
   .footer_product {
     width: 100%;
   }
-}
 
+  .accordion-body {
+    padding: 0px 50px 25.21px 10px !important;
+  }
+
+  .footer_links {
+    width: 100%;
+  }
+
+  .accordion-button {
+    padding: 18.21px 10px !important;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+
+  .customer_review_card {
+    width: 229.16px;
+  }
+
+  .button_su_inner {
+    padding: 15px 28px;
+    width: 142px;
+  }
+}
 
 @media(max-width:420px) {
   .what_we_do_card {
@@ -751,127 +861,16 @@ button:focus-visible {
   .services_box img {
     width: 30px;
   }
-}
 
-
-
-
-
-
-
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
-
-body {
-  font-family: 'Inconsolata', sans-serif;
-  background: #2a364f;
-}
-
-h1 {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.credit {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.4);
-
-}
-
-.content {
-  padding-top: 45px;
-  padding-bottom: 20px;
-}
-
-.button_container {
-  width: 176px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding-top: 40px;
-}
-
-.button_su {
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-
-.su_button_circle {
-  background-color: red;
-  border-radius: 1000px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0px;
-  height: 0px;
-  margin-left: 0px;
-  margin-top: 0px;
-  pointer-events: none;
-  /*animation-timing-function: ease-in-out; */
-}
-
-.button_su_inner {
-  display: inline-block;
-  background: #F8B627;
-  color: #F4F4F4;
-  font-size: 16px;
-  font-weight: normal;
-  width: 132px;
-  text-align: center;
-  border-radius: 3px;
-  transition: 400ms;
-  text-decoration: none;
-  padding: 22px;
-  z-index: 100000;
-}
-
-.button_text_container {
-  position: relative;
-  z-index: 10000;
-}
-
-.explode-circle {
-  animation: explode 0.5s forwards;
-
-}
-
-.desplode-circle {
-  animation: desplode 0.5s forwards;
-}
-
-@keyframes explode {
-  0% {
-    width: 0px;
-    height: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    background-color: rgba(42, 53, 80, 0.2);
-  }
-
-  100% {
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
+  .accordion-body {
+    padding: 0px 25px 25.21px 10px !important;
   }
 }
 
-@keyframes desplode {
-  0% {
-    width: 400px;
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -200px;
-    background-color: rgba(20, 180, 87, 0.8);
-  }
+.tr_y_100 {
+  transform: translateY(-100%);
+}
 
-  100% {
-    width: 0px;
-    height: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    background-color: rgba(129, 80, 108, 0.6);
-  }
+.tr_0 {
+  transform: translate(0, 0);
 }

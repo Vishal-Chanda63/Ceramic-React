@@ -10,8 +10,10 @@ import Whatwedo from "./components/Whatwedo";
 import Ourblog from "./components/Ourblog";
 import Services from "./components/Services";
 import Faq from "./components/Faq";
-import Customers from "./components/Customers";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CustomerReview from "./components/CustomerReview";
+import FaqsHeading from "./components/FaqsHeading";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -22,13 +24,15 @@ function App() {
       </div>
       <Whatwedo />
       <Whychoose />
-      <Customers />
+      <CustomerReview />
       <Works />
       <Gettouch />
       <Ourblog />
+      <FaqsHeading />
       <Faq />
       <Services />
       <Footer />
+      <BackToTop />
     </>
   );
 }

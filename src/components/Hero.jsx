@@ -4,9 +4,28 @@ import starImg from "../assets/svg/Star.svg";
 import greenStar from "../assets/svg/green_star.svg";
 import certifiedLogo from "../assets/svg/certified-logo.svg";
 import awardLogo from "../assets/svg/award_logo.svg";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const Hero = () => {
+  const [circleStyle, setCircleStyle] = useState({ left: 0, top: 0 });
+  const buttonRef = useRef(null);
+  const circleRef = useRef(null);
+  const handleMouseEnter = (e) => {
+    const parentOffset = buttonRef.current.getBoundingClientRect();
+    const relX = e.pageX - parentOffset.left;
+    const relY = e.pageY - parentOffset.top;
+    setCircleStyle({ left: relX, top: relY });
+    circleRef.current.classList.remove("desplode-circle");
+    circleRef.current.classList.add("explode-circle");
+  };
+  const handleMouseLeave = (e) => {
+    const parentOffset = buttonRef.current.getBoundingClientRect();
+    const relX = e.pageX - parentOffset.left;
+    const relY = e.pageY - parentOffset.top;
+    setCircleStyle({ left: relX, top: relY });
+    circleRef.current.classList.remove("explode-circle");
+    circleRef.current.classList.add("desplode-circle");
+  };
+
   return (
     <>
       <section className="mt-5 pt-0 pt-lg-4">
@@ -25,9 +44,19 @@ const Hero = () => {
                   Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
                   nyheter eurosamma sol: teroktig,
                 </p>
-                <button className="common_btn font_md fw-bold mt-1">
-                  Get A Quote
-                </button>
+                <div
+                  className="button_su_inner font_md fw-bold cursur position-relative overflow-hidden"
+                  ref={buttonRef}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div
+                    className="su_button_circle white"
+                    ref={circleRef}
+                    style={circleStyle}
+                  ></div>
+                  Get a Quote
+                </div>
 
                 <div class="mt-4 mt-sm-5 pt-0 pt-sm-3 d-flex flex-column flex-md-row">
                   <div class="d-inline d-md-flex  mb-4">

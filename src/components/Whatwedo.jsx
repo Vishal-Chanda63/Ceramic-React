@@ -49,7 +49,7 @@ const Dummy = () => {
   ];
   return (
     <div id="about" className="my-5 py-0 py-lg-4 py-xl-5">
-      <div className="container mt-4 py-3">
+      <div className="container mt-4 py-0 py-sm-3">
         <div class="col mt-0 mt-sm-1">
           <h2 class="font_xxg fw_600 text-center mb-0 black text-capitalize">
             What we do

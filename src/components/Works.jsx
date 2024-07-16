@@ -28,9 +28,9 @@ const Works = () => {
   ];
 
   return (
-    <section id="quote" class="py-4 my-3 px-3">
+    <section id="quote" class="py-0 py-sm-4 my-3 px-3 mt-5">
       <div class="container">
-        <div class="row order-1 mt-1">
+        <div class="row order-1 mt-0 mt-sm-1">
           <div class="col-12 col-lg-6 order-1 order-lg-0 pt-5 pt-lg-0">
             <div class="position-relative main_red_box pt-0 pt-sm-3 pt-lg-0">
               <div class="d-flex justify-content-center img_box position-relative">

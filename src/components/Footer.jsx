@@ -14,18 +14,22 @@ const Footer = () => {
   const myArr = [
     {
       title: "Links",
-      discription:
-        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+      list: ["home", "About Us", "Services", "Showcase"],
     },
     {
       title: "Legal",
-      discription:
-        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+      // linksOne: "Terms Of Use",
+      // linksSecond: "Privacy Policy",
+      // linksThird: "Cookie policy",
+      list: ["home", "About Us", "Services", "Showcase"],
     },
     {
       title: "Product",
-      discription:
-        "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+      list: ["home", "About Us", "Services", "Showcase"],
+
+      // linksOne: "Take Tour",
+      // linksSecond: "Live Chat",
+      // linksThird: "Reveiws",
     },
   ];
 
@@ -93,30 +97,14 @@ const Footer = () => {
                     {obj.title}
                   </p>
                   <ul class="list-unstyled cursur font_m foter_para">
-                    <a
-                      class="text-decoration-none light_black footer_link"
-                      href="./index.html"
-                    >
-                      <li>{}</li>
-                    </a>
-                    <a
-                      class="text-decoration-none light_black footer_link"
-                      href="#about"
-                    >
-                      <li class="my-2 py-1">About Us</li>
-                    </a>
-                    <a
-                      class="text-decoration-none light_black footer_link"
-                      href="#services"
-                    >
-                      <li>Services</li>
-                    </a>
-                    <a
-                      class="text-decoration-none light_black footer_link"
-                      href="#showcase"
-                    >
-                      <li class="mt-2 pt-1">Showcase</li>
-                    </a>
+                    {obj.list &&
+                      obj.list.map((value, i) => (
+                        <li key={i}>
+                          <a href={`${value.toLowerCase().replace(/ /g, "-")}`}>
+                            {value}
+                          </a>
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </div>
@@ -135,9 +123,28 @@ const Footer = () => {
                 >
                   <li>Stay up to date</li>
                 </a>
+
+                <div class="mt-2 pt-1">
+                  <div class="d-flex align-items-center justify-content-between main_box ps-4">
+                    <a class=" light_pink" href="">
+                      Your email{" "}
+                    </a>
+                    <a class=" common_btn subscribe_btn font_m fw_600" href="">
+                      Subscribe
+                    </a>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="copyright_border">
+        <div class=" px-3 py-3">
+          <p class="text-center mb-0 font_m light_black text text-capitalize">
+            Copyright 2024 ceramicsolutions.com all rights reserved
+          </p>
         </div>
       </div>
     </div>

@@ -87,7 +87,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" class=" mb-0 mb-sm-4 pt-0 pt-sm-5 px-3">
+    <section id="services" class=" mb-0 mb-sm-4 mt-5 pt-0 pt-sm-5 px-3">
       <div class="container">
         <div
           class="row mt-3 pt-1 justify-content-center justify-content-lg-start

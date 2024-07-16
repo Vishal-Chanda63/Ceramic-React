@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import heroLogo from "../assets/svg/hero-logo.svg";
 
 const Header = () => {
+  const [isMobileNavVisible, setisMobileNavVisible] = useState(false);
   return (
     <>
       <nav class="navbar-wrapper">
@@ -161,6 +162,7 @@ const Header = () => {
               </div>
 
               <div
+                onClick={() => setisMobileNavVisible(!isMobileNavVisible)}
                 id="main-menu"
                 class="hamburger-menu d-inline-block d-lg-none"
               >
@@ -168,6 +170,11 @@ const Header = () => {
                 <span class="sec"></span>
                 <span class="third"></span>
               </div>
+              <div
+                className={` cpmmon_transition position-fixed top-0 start-0 bg-black h-100 w-100 z-3 ${
+                  isMobileNavVisible ? " tr_0" : " tr_y_100"
+                } `}
+              ></div>
             </div>
           </div>
         </div>
