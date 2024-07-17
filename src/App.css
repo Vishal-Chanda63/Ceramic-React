@@ -27,7 +27,7 @@ h4 {
   box-sizing: border-box;
 }
 
-.cpmmon_transition {
+.common_transition {
   transition: 0.4s ease-in-out;
 }
 
@@ -263,13 +263,13 @@ button:focus-visible {
   outline: none !important;
 }
 
-
 /* ======================= BUTTON HOVER CSS ============================== */
 .button_su_inner {
   padding: 18px 28px;
   background-color: var(--red-color) !important;
   border-radius: 56px;
   width: 173px;
+  z-index: 2 !important;
 }
 
 .su_button_circle {
@@ -289,6 +289,67 @@ button:focus-visible {
 .navbar_btn_quote:hover {
   border: 1px solid var(--red-color);
 }
+
+#main-menu {
+  z-index: 4;
+}
+
+.bg_red {
+  background-color: var(--red-color);
+}
+
+.tr_y_100 {
+  transform: translateY(-100%);
+}
+
+.tr_0 {
+  transform: translate(0, 0);
+}
+
+.hamburger-menu {
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+.hamburger-menu.open .hamburger.first {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: #fff;
+}
+
+.hamburger-menu.open .hamburger.sec {
+  opacity: 0;
+}
+
+.hamburger-menu.open .hamburger.third {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: #fff;
+}
+
+.cross.first {
+  transform: rotate(45deg);
+  position: relative;
+  top: 4px;
+}
+
+.cross.sec {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 3px;
+}
+
+.navbar-wrapper .hamburger-menu {
+  height: 35px;
+}
+
 
 
 /* ======================= HERO SECTION ============================== */
@@ -603,6 +664,14 @@ button:focus-visible {
   color: var(--red-color) !important;
 }
 
+.footer_link li a {
+  transition: 0.3s ease-in-out !important;
+}
+
+.footer_link li a:hover {
+  color: var(--red-color) !important;
+}
+
 .mail_hover {
   transition: 0.3s ease-in-out;
 }
@@ -865,12 +934,4 @@ button:focus-visible {
   .accordion-body {
     padding: 0px 25px 25.21px 10px !important;
   }
-}
-
-.tr_y_100 {
-  transform: translateY(-100%);
-}
-
-.tr_0 {
-  transform: translate(0, 0);
 }

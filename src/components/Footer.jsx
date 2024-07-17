@@ -14,22 +14,15 @@ const Footer = () => {
   const myArr = [
     {
       title: "Links",
-      list: ["home", "About Us", "Services", "Showcase"],
+      list: ["Home", "About Us", "Services", "Showcase"],
     },
     {
       title: "Legal",
-      // linksOne: "Terms Of Use",
-      // linksSecond: "Privacy Policy",
-      // linksThird: "Cookie policy",
-      list: ["home", "About Us", "Services", "Showcase"],
+      list: ["Terms Of Use", "Pivacy Plicy", "Cookie Policy"],
     },
     {
       title: "Product",
-      list: ["home", "About Us", "Services", "Showcase"],
-
-      // linksOne: "Take Tour",
-      // linksSecond: "Live Chat",
-      // linksThird: "Reveiws",
+      list: ["Take Tour", "Live Chat", "Reveiws"],
     },
   ];
 
@@ -92,15 +85,18 @@ const Footer = () => {
           {myArr.map((obj, index) => {
             return (
               <div class="col-4 col-sm-4 col-lg-1 mt-3 mt-md-0 p-0">
-                <div class="footer_links ">
+                <div class="footer_links">
                   <p class="font_lg fw_600 mb-1 mb-sm-3 pb-1 light_black">
                     {obj.title}
                   </p>
                   <ul class="list-unstyled cursur font_m foter_para">
                     {obj.list &&
                       obj.list.map((value, i) => (
-                        <li key={i}>
-                          <a href={`${value.toLowerCase().replace(/ /g, "-")}`}>
+                        <li className="mt-3 font_m" key={i}>
+                          <a
+                            className="light_black"
+                            href={`${value.toLowerCase().replace(/ /g, "-")}`}
+                          >
                             {value}
                           </a>
                         </li>

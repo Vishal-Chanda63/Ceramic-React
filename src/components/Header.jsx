@@ -2,81 +2,88 @@ import React, { useState } from "react";
 import heroLogo from "../assets/svg/hero-logo.svg";
 
 const Header = () => {
-  const [isMobileNavVisible, setisMobileNavVisible] = useState(false);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
+  const toggleMobileNav = () => {
+    setIsMobileNavVisible(!isMobileNavVisible);
+    setIsOverlayVisible(!isOverlayVisible);
+  };
+
   return (
     <>
-      <nav class="navbar-wrapper">
-        <div id="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="left d-flex justify-content-center text-center flex-column align-items-center">
-                  <ul class="list-unstyled pt-5">
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-1">
+      <nav className={`navbar-wrapper ${isOverlayVisible ? "" : ""}`}>
+        <div id="overlay" className={isOverlayVisible ? "visible overlay" : ""}>
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="left d-flex justify-content-center text-center flex-column align-items-center">
+                  <ul className="list-unstyled pt-5">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-1">
                         <a
                           href="https://ceramic-smoky.vercel.app/"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           Home
                         </a>
                       </span>
                     </li>
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-2">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-2">
                         <a
                           href="#about"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           About
                         </a>
                       </span>
                     </li>
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-3">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-3">
                         <a
                           href="#services"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           Services
                         </a>
                       </span>
                     </li>
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-4">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-4">
                         <a
                           href="#portfolio"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           Portfolio
                         </a>
                       </span>
                     </li>
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-5">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-5">
                         <a
                           href="#contact"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           Contact us
                         </a>
                       </span>
                     </li>
-                    <li class="py-lg-3 py-2 overflow-hidden">
-                      <span class="d-inline-block section-5">
+                    <li className="py-lg-3 py-2 overflow-hidden">
+                      <span className="d-inline-block section-5">
                         <a
                           href="#quote"
-                          class="overlay-links white font_xl fw_600"
+                          className="overlay-links white font_xl fw_600"
                         >
                           Request a Qoute
                         </a>
                       </span>
                     </li>
 
-                    <li class="py-2 py-sm-0 py-lg-3 overflow-hidden">
-                      <div class="d-block d-sm-none">
+                    <li className="py-2 py-sm-0 py-lg-3 overflow-hidden">
+                      <div className="d-block d-sm-none">
                         <a href="tel: (865) 621-1717">
-                          <button class="get_quote_btn fw-bold font_md navbar_btn">
+                          <button className="get_quote_btn fw-bold font_md navbar_btn">
                             (865) 621-1717
                           </button>
                         </a>
@@ -88,46 +95,46 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div class="container ">
-          <div class="nav-quantum py-2 py-lg-3 px-3 d-flex justify-content-between align-items-center">
+        <div className="container ">
+          <div className="nav-quantum py-2 py-lg-3 px-3 d-flex justify-content-between align-items-center">
             <div>
-              <a href="\https://ceramic-smoky.vercel.app/">
+              <a href="https://ceramic-smoky.vercel.app/">
                 <img src={heroLogo} alt="heroLogo" />
               </a>
             </div>
-            <div class="d-flex align-items-center">
-              <div class="nav-items-wrap d-none d-lg-block">
-                <ul class="nav-items-list list-unstyled align-items-center d-flex align-items-center mb-0">
-                  <li class="n-item pe-3 pe-xl-4">
+            <div className="d-flex align-items-center">
+              <div className="nav-items-wrap d-none d-lg-block">
+                <ul className="nav-items-list list-unstyled align-items-center d-flex align-items-center mb-0">
+                  <li className="n-item pe-3 pe-xl-4">
                     <a
                       href="https://ceramic-smoky.vercel.app/"
-                      class="nav-links font_xsd fw_600"
+                      className="nav-links font_xsd fw_600"
                     >
                       Home
                     </a>
                   </li>
-                  <li class="n-item pe-3 pe-xl-4">
-                    <a class="nav-links font_xsd fw_600" href="#about">
+                  <li className="n-item pe-3 pe-xl-4">
+                    <a className="nav-links font_xsd fw_600" href="#about">
                       About
                     </a>
                   </li>
-                  <li class="n-item pe-3 pe-xl-4">
-                    <a href="#services" class="nav-links font_xsd fw_600">
+                  <li className="n-item pe-3 pe-xl-4">
+                    <a href="#services" className="nav-links font_xsd fw_600">
                       Services
                     </a>
                   </li>
-                  <li class="n-item pe-3 pe-xl-4">
-                    <a href="#portfolio" class="nav-links font_xsd fw_600">
+                  <li className="n-item pe-3 pe-xl-4">
+                    <a href="#portfolio" className="nav-links font_xsd fw_600">
                       Portfolio
                     </a>
                   </li>
-                  <li class="n-item pe-3 pe-xl-4">
-                    <a href="#contact" class="nav-links font_xsd fw_600">
+                  <li className="n-item pe-3 pe-xl-4">
+                    <a href="#contact" className="nav-links font_xsd fw_600">
                       Contact us
                     </a>
                   </li>
-                  <li class="n-item pe-3 pe-xl-4">
-                    <a href="#quote" class="nav-links font_xsd fw_600">
+                  <li className="n-item pe-3 pe-xl-4">
+                    <a href="#quote" className="nav-links font_xsd fw_600">
                       Request a Qoute
                     </a>
                   </li>
@@ -135,10 +142,10 @@ const Header = () => {
               </div>
             </div>
 
-            <div class="d-flex align-items-center">
-              <div class="d-none d-sm-block me-4">
+            <div className="d-flex align-items-center">
+              <div className="d-none d-sm-block me-4">
                 <a href="tel: (865) 621-1717">
-                  <button class="common_btn navbar_btn_quote fw-bold font_m d-flex">
+                  <button className="common_btn navbar_btn_quote fw-bold font_m d-flex">
                     <svg
                       className="me-2"
                       width="24"
@@ -162,16 +169,27 @@ const Header = () => {
               </div>
 
               <div
-                onClick={() => setisMobileNavVisible(!isMobileNavVisible)}
+                onClick={toggleMobileNav}
                 id="main-menu"
-                class="hamburger-menu d-inline-block d-lg-none"
+                className={`hamburger-menu d-inline-block d-lg-none ${
+                  isMobileNavVisible ? "open" : ""
+                }`}
               >
-                <span class="first"></span>
-                <span class="sec"></span>
-                <span class="third"></span>
+                {isMobileNavVisible ? (
+                  <>
+                    <span className="cross first"></span>
+                    <span className="cross sec"></span>
+                  </>
+                ) : (
+                  <>
+                    <span className="hamburger first"></span>
+                    <span className="hamburger sec"></span>
+                    <span className="hamburger third"></span>
+                  </>
+                )}
               </div>
               <div
-                className={` cpmmon_transition position-fixed top-0 start-0 bg-black h-100 w-100 z-3 ${
+                className={`common_transition position-fixed top-0 start-0 bg_red h-100 w-100 z-3 ${
                   isMobileNavVisible ? " tr_0" : " tr_y_100"
                 } `}
               ></div>
